@@ -23,9 +23,13 @@ Route::get('/new_doctor', function () {
     return view('new_doctor');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::POST('/insert_patient', 'EntryController@insert_patient');
 
 Auth::routes();
 

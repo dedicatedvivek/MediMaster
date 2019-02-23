@@ -18,6 +18,8 @@
     <h1 class="form-header">Create Your Profile Now!!!</h1>
    
     <form class="signup-form" method="post" action="/insert_patient">
+
+      {{csrf_field()}}
       <label for="p_name">Your Name</label>
       <input id="name" type="text" name="p_name" required/>
 
@@ -26,28 +28,42 @@
       <input id="age" type="number" name="p_age" required/>
 <br>
       <label class='p-form-label'>Address</label>
-      <input id="address" type="" name="p_address" autocomplete="off"/>
+      <input id="address" type="" name="p_address" required/>
 <br>
       <label class='p-form-label' >City</label>
-      <input id="city" type="text" name="p_city" autocomplete="off"/>
+      <input id="city" type="text" name="p_city" required/>
 <br>
       <label class='p-form-label' >Blood Group</label>
-      <input id="blood_group" type="text" name="p_blood_group" autocomplete="off"/>
+      <select name="p_blood_group">
+        <option value="A +ve">A +ve</option>
+        <option value="A -ve">A -ve</option>
+        <option value="B +ve">B +ve</option>
+        <option value="B -ve">B -ve</option>
+        <option value="O +ve">O +ve</option>
+        <option value="O -ve">O -ve</option>
+        <option value="AB +ve">AB +ve</option>
+        <option value="AB -ve">AB -ve</option>
+      </select>
 <br>
       <label class='p-form-label' >Family Doctor</label>
-      <input id="family_doc" type="text" name="p_fam_doc" autocomplete="off"/><br>
+      <input id="family_doc" type="text" name="p_fam_doc" required/><br>
       <label class='p-form-label' >Physical Status</label>
-      <input id="physical_status" type="text" name="p_physical_status" autocomplete="off"/><br>
+      <select name="p_physical_status">
+        <option value="physically_challenged">Physically Challenged</option>
+        <option value="physically_normal">Normal</option>
+</select></br>
 
       <label class='p-form-label' >Mental Status</label>
-      <input id="mental_status" type="text" name="p_mental_status" autocomplete="off"/><br>
-
+       <select name="p_mental_status">
+        <option value="mentally_challenged">Mentally Challenged</option>
+        <option value="mentally_normal">Normal</option>
+</select></br>
 
       <label class='p-form-label' >Phone Number</label>
-      <input id="phone" type="number" name="p_phone" autocomplete="off"/><br>
+      <input id="phone" type="text" name="p_phone" required/><br>
 
       <label class='p-form-label' >Email</label>
-      <input id="email" type="email" name="p_email" autocomplete="off"/><br>
+      <input id="email" type="email" name="p_email" required/><br>
 
 
 
