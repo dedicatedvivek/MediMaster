@@ -69,6 +69,10 @@
       <input  type="password" name="p_password" required>
       <br>
 
+      <label class="p-class-label" for="p_photo">Upload Photo</label>
+      <input  type="file" name="p_photo" capture="camera" required>
+      <br>
+
 
 
       <input type="submit" name="submit" value="SUBMIT" />
