@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 23, 2019 at 08:42 AM
--- Server version: 10.1.33-MariaDB
--- PHP Version: 7.2.6
+-- Generation Time: Feb 23, 2019 at 09:18 AM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `medimaster`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `doctors_master`
+--
+
+CREATE TABLE `doctors_master` (
+  `d_id` int(11) NOT NULL,
+  `d_name` varchar(200) NOT NULL,
+  `d_address` varchar(200) NOT NULL,
+  `d_city` varchar(200) NOT NULL,
+  `d_specialisation` varchar(200) NOT NULL,
+  `d_medipoints` int(11) NOT NULL,
+  `d_phone` int(11) NOT NULL,
+  `fo_p_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -49,6 +66,12 @@ CREATE TABLE `patients_master` (
 --
 
 --
+-- Indexes for table `doctors_master`
+--
+ALTER TABLE `doctors_master`
+  ADD PRIMARY KEY (`d_id`);
+
+--
 -- Indexes for table `patients_master`
 --
 ALTER TABLE `patients_master`
@@ -57,6 +80,12 @@ ALTER TABLE `patients_master`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `doctors_master`
+--
+ALTER TABLE `doctors_master`
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `patients_master`
