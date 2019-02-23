@@ -65,15 +65,17 @@
       <label class='p-form-label' >Email</label>
       <input id="email" type="email" name="p_email" required/><br>
 
+      <label class="p-class-label" for="p_password">Password</label>
+      <input  type="password" name="p_password" required>
+      <br>
+
 
 
       <input type="submit" name="submit" value="SUBMIT" />
     </form>
   </div>
 </div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-    <script src="js/indexpatientform.js"></script>
+  
 
 </body>
 </html>

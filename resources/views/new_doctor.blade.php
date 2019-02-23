@@ -18,20 +18,22 @@
     <h1 class="form-header">Create Your Profile Now!!</h1>
    
     <form class="signup-form" method="post" action="/insert_doctor">
-      <label class="d-class-label" for="d_named">Your Name</label>
-      <input  type="text" name="d_name" autocomplete="off"/>
+     {{ csrf_field() }}
+
+      <label class="d-class-label" for="d_name">Your Name</label>
+      <input  type="text" name="d_name" required>
       <br>
 
       <label class="d-class-label" for="d_address"> Address</label>
-      <input  type="text" name="d_address" autocomplete="off"/>
+      <input  type="text" name="d_address" required>
       <br>
 
       <label class="d-class-label" for="d_city">City</label>
-      <input  type="text" name="d_city" autocomplete="off"/>
+      <input  type="text" name="d_city" required>
       <br>
 
       <label class="d-class-label" for="d_specialisation">Specialisation</label>
-      <select name="d_specialisation" />
+      <select name="d_specialisation" >
          <option value="immunology">Immunologist</option>
          <option value="radiology">Radiologist</option>
          <option value="dermatology">Dermatologist</option>
@@ -40,22 +42,27 @@
          <option value="immunology">Cardiologist</option>
          <option value="pediatric">Pediatric</option>
          <option value="general_physician">General Physician</option>
+        </select>
       <br>
 
-      <label class="d-class-label" for="d_medipoints">Medipoints</label>
-      <input  type="number" name="d_medipoints" autocomplete="off"/>
-      <br>
-
+      
       <label class="d-class-label" for="d_phone">Phone Number</label>
-      <input  type="number" name="d_phone" autocomplete="off"/>
+      <input  type="text" name="d_phone" required>
       <br>
 
       <label class="d-class-label" for="d_age">Age</label>
-      <input  type="number" name="d_age" autocomplete="off"/>
+      <input  type="number" name="d_age" required>
+      <br>
+
+      <label class="d-class-label" for="d_email">Email</label>
+      <input  type="email" name="d_email" required>
+      <br>
+      <label class="d-class-label" for="d_password">Password</label>
+      <input  type="password" name="d_password" required>
       <br>
 
       <input type="submit" name="submit" value="submit">
-
+      
     </form>
   </div>
 </div>
