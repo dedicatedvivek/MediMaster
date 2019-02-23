@@ -60,6 +60,9 @@
       <label class="d-class-label" for="d_password">Password</label>
       <input  type="password" name="d_password" required>
       <br>
+      <label class="d-class-label" for="d_file">Profile Photo:</label>
+      <input  type="file" name="d_photo" capture = "camera" required>
+      <br>
 
       <input type="submit" name="submit" value="submit">
       

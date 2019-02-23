@@ -178,8 +178,9 @@ class EntryController extends Controller
     	$d_age = $req->input('d_age');
     	$d_email = $req->input('d_email');
     	$d_password = $req->input('d_password');
+        $d_photo = $req->input('d_photo');
 
-    	$data1=$arrayName = array('d_name' =>$d_name ,'d_address' =>$d_address , 'd_city' =>$d_city , 'd_specialisation' =>$d_specialisation , 'd_medipoints' =>$d_medipoints , 'd_phone' =>$d_phone , 'd_age' =>$d_age,'d_email' =>$d_email,'d_password' =>$d_password);
+    	$data1=$arrayName = array('d_name' =>$d_name ,'d_address' =>$d_address , 'd_city' =>$d_city , 'd_specialisation' =>$d_specialisation , 'd_medipoints' =>$d_medipoints , 'd_phone' =>$d_phone , 'd_age' =>$d_age,'d_email' =>$d_email,'d_password' =>$d_password,'d_photo' =>$d_photo);
 
          DB::table('doctors_master')->insert($data1);
 
